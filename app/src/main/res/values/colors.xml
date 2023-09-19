@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="light_black">#666666</color>
+    <color name="white">#FFFFFF</color>
+    <color name="grey"> #505050</color>
+    <color name="accent"> #666666</color>
+    <color name="primary"> #004987</color>
+    <color name="secondary"> #1DCAD3</color>
+    <color name="secondary_light">#BDF0F3</color>
+    <color name="text_color"> #004987</color>
+    <color name="primary_dark">#011B32</color>
+    <color name="primary_light">#DDEAF6</color>
+    <color name="primary_light_thin">#E9EEF3</color>
+    <color name="primary_light1">#E6ECF3</color>
+    <color name="focused_text_color">#FF0000</color> <!-- Red color for focused text -->
+    <color name="error_text_color">#FF0000</color> <!-- Red color for error text -->
+</resources>

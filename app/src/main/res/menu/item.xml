@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Home"
+        android:icon="@drawable/vector"
+        android:enabled="true"
+        android:id="@+id/firstFragment"/>
+    <item
+        android:id="@+id/secondFragment"
+        android:icon="@drawable/chat_icon"
+        android:enabled="true"
+        android:title="Message" />
+    <item
+        android:id="@+id/Third"
+        android:icon="@drawable/notification_new"
+        android:enabled="true"
+        android:title="Notification" />
+    <item
+        android:id="@+id/forth_fragment"
+        android:icon="@drawable/menu_icon"
+
+        android:enabled="true"
+        android:title="Menu" />
+</menu>
