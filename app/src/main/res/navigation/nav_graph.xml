@@ -44,6 +44,8 @@
         tools:layout="@layout/fragment_login_fragment" >
         <action
             android:id="@+id/action_login_fragment_to_firstFragment"
-            app:destination="@id/firstFragment" />
+            app:destination="@id/firstFragment"
+            app:popUpTo="@id/login_fragment"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>

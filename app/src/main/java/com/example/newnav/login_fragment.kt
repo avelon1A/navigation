@@ -1,19 +1,21 @@
 package com.example.newnav
 
-import android.annotation.SuppressLint
+
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.EditText
+
 import android.widget.Toast
-import com.google.android.material.textfield.TextInputLayout
+import androidx.navigation.fragment.findNavController
+import com.google.android.material.textfield.TextInputEditText
+
 
 class login_fragment : Fragment() {
-    lateinit var username: TextInputLayout
-    lateinit var password: TextInputLayout
+    lateinit var username: TextInputEditText
+    lateinit var password: TextInputEditText
     lateinit var login: Button
 
     override fun onCreateView(
@@ -25,13 +27,13 @@ class login_fragment : Fragment() {
 
         // Initialize your views
 
-        password = view.findViewById(R.id.password)
-        username = view.findViewById(R.id.username)
+        password = view.findViewById(R.id.password_edit_text)
+        username = view.findViewById(R.id.username_edit_text)
         login = view.findViewById(R.id.login_button) // Correct the button ID here
 
         login.setOnClickListener {
-            val enteredUsername = username.toString()
-            val enteredPassword = password.toString()
+            val enteredUsername = username.text.toString()
+            val enteredPassword = password.text.toString()
             login(enteredUsername, enteredPassword)
         }
 
@@ -42,27 +44,12 @@ class login_fragment : Fragment() {
         if (username == "username" && password == "12345678") {
             Toast.makeText(requireContext(), "Login Successful", Toast.LENGTH_SHORT).show()
             // Create an instance of the first fragment
-            val firstFragment = firstFragment()
+            val navController = findNavController()
 
-            // Get the FragmentManager
-            val fragmentManager = requireActivity().supportFragmentManager
-
-            // Start a new fragment transaction
-            val transaction = fragmentManager.beginTransaction()
-
-            // Replace the current fragment with the first fragment
-            transaction.replace(R.id.fragmentContainerView2, firstFragment)
-
-            // Add the transaction to the back stack
-            transaction.addToBackStack(null)
-
-            // Commit the transaction
-            transaction.commit()
-        }
-        else{
+            // Navigate to the firstFragment
+            navController.navigate(R.id.action_login_fragment_to_firstFragment)
+        } else {
             Toast.makeText(requireContext(), "Login fail", Toast.LENGTH_SHORT).show()
-
         }
     }
-
 }
