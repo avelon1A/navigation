@@ -4,7 +4,7 @@
     android:id="@+id/forth_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="#D2458DAE"
     tools:context=".forthFragment">
 
 
